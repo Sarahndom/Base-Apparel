@@ -1,0 +1,198 @@
+/*  CSS VARIABLES (STYLE GUIDE) */
+:root {
+    /* Primary Colors */
+    --pink-400: hsl(0, 36%, 70%);
+    --red-500: hsl(0, 93%, 68%);
+
+    /* Neutral Colors */
+    --gray-900: hsl(0, 6%, 24%);
+
+    /* Gradients */
+    --gradient-light: linear-gradient(135deg,
+            hsl(0, 0%, 100%),
+            hsl(0, 100%, 98%));
+
+    --gradient-pink: linear-gradient(135deg,
+            hsl(0, 80%, 86%),
+            hsl(0, 74%, 74%));
+
+    /* Typography */
+    --font-family-primary: "Josefin Sans", sans-serif;
+
+    /* Font Weights */
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semibold: 600;
+
+    /* Base font size */
+    --fs-body: 16px;
+
+    /* Layout breakpoints */
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+}
+
+/* BASE STYLES */
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--fs-body);
+    color: var(--gray-900);
+    background: var(--gradient-light);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    background-image: url(/images/bg-pattern-desktop.svg);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.base-apparel {
+    padding: 2rem 5rem 5rem;
+}
+
+.base-apparell {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 9rem;
+    width: 100%;
+    max-width: 500px;
+    height: 60%;
+}
+
+h1 {
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+
+.coming {
+    font-weight: 300;
+    color: var(--pink-400);
+}
+
+.coming-soon {
+    font-weight: var(--fw-semibold);
+}
+
+.shoppers {
+    position: relative;
+    line-height: 1.5rem;
+    color: var(--pink-400);
+    bottom: 2rem;
+}
+
+.email {
+    position: relative;
+    margin-top: auto;
+}
+
+.email input {
+    color: linear-gradient(135deg,
+            hsl(0, 0%, 100%),
+            hsl(0, 100%, 98%));
+    width: 80%;
+    padding: 1.2rem 2rem;
+    border-radius: 3rem;
+    border: 1px solid var(--pink-400);
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+}
+
+.email input:focus {
+    border-color: var(--red-500);
+}
+
+.submit-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100px;
+    border: none;
+    border-radius: 2rem;
+    background: linear-gradient(135deg,
+            hsl(0, 80%, 86%),
+            hsl(0, 74%, 74%));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.error {
+    border-color: var(--red-500) !important;
+}
+
+.error-msg {
+    color: var(--red-500);
+    font-size: 14px;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.error-visible {
+    display: block;
+}
+
+
+
+.image-wrapper {
+    background: var(--gradient-pink);
+    position: relative;
+
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        grid-template-columns: 1fr;
+
+    }
+
+    .logo {
+        position: absolute;
+        top: 2rem;
+        left: 5rem;
+        z-index: 10;
+    }
+
+    .base-apparell {
+        top: 0;
+        max-width: 700px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .image-wrapper {
+        grid-column: 1/1;
+        order: -1;
+        margin-top: 8rem;
+    }
+
+}
