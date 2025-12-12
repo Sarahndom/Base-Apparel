@@ -11,9 +11,9 @@ The challenge focuses on responsive layouts, form validation, and UI accuracy.
 
 🔗 Links
 
-Live Site: https://your-live-site-link
+Live Site: https://base-apparel-coming-soon-pag.netlify.app/
 
-Solution Page: https://your-frontend-mentor-solution
+Solution Page: https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-YNK-QNPEqH
 
 GitHub Repo: https://github.com/Sarahndom/Base-Apparel.git
 
